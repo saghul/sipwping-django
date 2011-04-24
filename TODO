@@ -1,0 +1,4 @@
+
+- Use Django caching system to cache query results
+- Implement REST API (GET and POST methods)
+

@@ -1,0 +1,39 @@
+{% extends "sipwping/base.html" %}
+{% block content %}
+
+<div class='prepend-6 span-12 append-6 last append-bottom'>
+    <div id='_form'>
+        <form id="search_form" action="" method="POST">
+            {% csrf_token %}
+            {% for field in form.visible_fields %}
+                <div class='form_field'>
+                    {{ field }}
+                </div>
+            {% endfor %}
+            <input type="submit" value="Check!" style="position: absolute; left: -9999px; width: 1px; height: 1px;">
+        </form>
+    </div>
+</div>
+<div class='prepend-8 span-8 append-8 last prepend-top'>
+    <div id='_status'>
+        {% if status %}
+            {% if status.code > 199 and statuc.code < 300 %}
+                <div class='success _status'>
+                    {{ status.code }} - {{ status.reason }}
+                </div>
+            {% else %}
+                <div class='error _status'>
+                    {{ status.code }} - {{ status.reason }}
+                </div>
+            {% endif %}
+        {% endif %}
+        {% if error %}
+            <div class='notice _status'>
+                {{ error }}
+            </div>
+        {% endif %}
+    </div>
+</div>
+
+{% endblock %}
+

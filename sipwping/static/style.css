@@ -1,0 +1,47 @@
+
+@import url(http://fonts.googleapis.com/css?family=Cabin+Sketch:bold);
+
+div#_header {
+    margin: 20em 0 4em 0
+}
+
+div#_header h1 {
+    font-family: 'Cabin Sketch', arial, serif;
+    font-size: 15em;
+    text-align: center;
+    margin-bottom: 0em;
+}
+
+div#_content {
+    margin: 0 0 21em 0
+}
+
+div._status {
+    text-align: center;
+    font-family: arial, serif;
+    font-size: 2em;
+}
+
+div._status_loading {
+    background:url(loading.gif) center no-repeat;
+}
+
+div#_footer {
+    text-align: center;
+    font-family: arial, serif;
+    font-size: 1em;
+}
+
+form#search_form {
+    text-align: center;
+}
+
+input[type=text]#id_uri {
+    background:url(right4.png) left no-repeat;
+    border: 2px solid #afafaf;
+    padding: 0.1em 0.5em 0.05em 1em;
+    font-size: 2em;
+    width: 100%;
+    margin: 0;
+}
+
